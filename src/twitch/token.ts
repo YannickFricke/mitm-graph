@@ -29,7 +29,9 @@ export class TwitchToken {
 
 		@inject(Identifiers.TwitchClientSecret)
 		private readonly client_secret: string,
-	) {}
+	) {
+		this.save_token = this.save_token.bind(this);
+	}
 
 	/**
 	 * Tries to load the token from the token file.
