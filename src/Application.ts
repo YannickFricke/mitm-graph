@@ -28,5 +28,13 @@ export class Application {
 		this.twitchToken.save_token();
 
 		this.paginator.load_from_file('paginator.json');
+
+		// Setup the timers
+		setInterval(this.twitchToken.save_token, 1000 * 60 * 60);
+		setInterval(() => {
+			this.logger.info('Saving paginator.');
+			this.paginator.save_to_file('paginator.json');
+			this.logger.info('Saved paginator.');
+		}, 1000 * 60 * 60);
 	}
 }
