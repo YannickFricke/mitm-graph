@@ -8,6 +8,6 @@ config();
 (async () => {
 	const container = await get_container();
 
-	const application = container.get(Application);
+	const application = await container.getAsync(Application);
 	await application.run();
 })();

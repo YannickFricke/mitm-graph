@@ -15,11 +15,5 @@ export const get_container = async (): Promise<Container> => {
 
 	container.load(new TwitchContainerModule());
 
-	const axios_client = axios.create({
-		validateStatus: () => true,
-	});
-
-	container.bind(Identifiers.HTTPClient).toConstantValue(axios_client);
-
 	return container;
 };

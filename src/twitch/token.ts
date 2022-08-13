@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { inject, injectable } from 'inversify';
 import { Logger } from 'tslog';
@@ -6,7 +7,7 @@ import { HTTPClient } from '../types';
 
 @injectable()
 export class TwitchToken {
-	private token?: string;
+	public token?: string;
 	private expires_at: Date = new Date();
 
 	private readonly token_file_path = './.twitch_token';
@@ -20,9 +21,6 @@ export class TwitchToken {
 	constructor(
 		@inject(Logger)
 		private logger: Logger,
-
-		@inject(Identifiers.HTTPClient)
-		private readonly http_client: HTTPClient,
 
 		@inject(Identifiers.TwitchClientId)
 		private readonly client_id: string,
@@ -88,7 +86,7 @@ export class TwitchToken {
 	}
 
 	public async refresh_token() {
-		const response = await this.http_client.postForm(
+		const response = await axios.postForm(
 			'https://id.twitch.tv/oauth2/token',
 			{
 				client_id: this.client_id,
