@@ -2,11 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   got: ^12.3.1
+  inversify: ^6.0.1
   neo4j-driver: ^4.4.7
   reflect-metadata: ^0.1.13
 
 dependencies:
   got: 12.3.1
+  inversify: 6.0.1
   neo4j-driver: 4.4.7
 
 devDependencies:
@@ -177,6 +179,10 @@ packages:
 
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
+    dev: false
+
+  /inversify/6.0.1:
+    resolution: {integrity: sha512-B3ex30927698TJENHR++8FfEaJGqoWOgI6ZY5Ht/nLUsFCwHn6akbwtnUAPCgUepAnTpe2qHxhDNjoKLyz6rgQ==}
     dev: false
 
   /json-buffer/3.0.1:
