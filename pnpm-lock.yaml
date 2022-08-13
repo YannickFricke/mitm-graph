@@ -5,6 +5,7 @@ specifiers:
   got: ^12.3.1
   inversify: ^6.0.1
   neo4j-driver: ^4.4.7
+  prettier: ^2.7.1
   reflect-metadata: ^0.1.13
   ts-node-dev: ^2.0.0
   typescript: ^4.7.4
@@ -16,6 +17,7 @@ dependencies:
 
 devDependencies:
   '@types/node': 18.7.2
+  prettier: 2.7.1
   reflect-metadata: 0.1.13
   ts-node-dev: 2.0.0_tyvfw3xlkeib37wbsln4bvkpbm
   typescript: 4.7.4
@@ -514,6 +516,12 @@ packages:
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pump/3.0.0:
