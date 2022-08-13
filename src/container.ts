@@ -1,7 +1,9 @@
 import { Container } from 'inversify';
 import { Logger } from 'tslog';
 import { Application } from './Application';
+import { Identifiers } from './ioc/Identifiers';
 import { TwitchContainerModule } from './ioc/TwitchContainerModule';
+import axios from 'axios';
 
 export const get_container = async (): Promise<Container> => {
 	const container = new Container();
@@ -12,6 +14,12 @@ export const get_container = async (): Promise<Container> => {
 	container.bind(Application).toSelf();
 
 	container.load(new TwitchContainerModule());
+
+	const axios_client = axios.create({
+		validateStatus: () => true,
+	});
+
+	container.bind(Identifiers.HTTPClient).toConstantValue(axios_client);
 
 	return container;
 };
