@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^18.7.2
   got: ^12.3.1
   inversify: ^6.0.1
   neo4j-driver: ^4.4.7
@@ -14,8 +15,9 @@ dependencies:
   neo4j-driver: 4.4.7
 
 devDependencies:
+  '@types/node': 18.7.2
   reflect-metadata: 0.1.13
-  ts-node-dev: 2.0.0_typescript@4.7.4
+  ts-node-dev: 2.0.0_tyvfw3xlkeib37wbsln4bvkpbm
   typescript: 4.7.4
 
 packages:
@@ -103,7 +105,6 @@ packages:
 
   /@types/node/18.7.2:
     resolution: {integrity: sha512-ce7MIiaYWCFv6A83oEultwhBXb22fxwNOQf5DIxWA4WXvDQ7K+L0fbWl/YOfCzlR5B/uFkSnVBhPcOfOECcWvA==}
-    dev: false
 
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
@@ -624,7 +625,7 @@ packages:
     hasBin: true
     dev: true
 
-  /ts-node-dev/2.0.0_typescript@4.7.4:
+  /ts-node-dev/2.0.0_tyvfw3xlkeib37wbsln4bvkpbm:
     resolution: {integrity: sha512-ywMrhCfH6M75yftYvrvNarLEY+SUXtUvU8/0Z6llrHQVBx12GiFk5sStF8UdfE/yfzk9IAq7O5EEbTQsxlBI8w==}
     engines: {node: '>=0.8.0'}
     hasBin: true
@@ -643,7 +644,7 @@ packages:
       rimraf: 2.7.1
       source-map-support: 0.5.21
       tree-kill: 1.2.2
-      ts-node: 10.9.1_typescript@4.7.4
+      ts-node: 10.9.1_tyvfw3xlkeib37wbsln4bvkpbm
       tsconfig: 7.0.0
       typescript: 4.7.4
     transitivePeerDependencies:
@@ -652,7 +653,7 @@ packages:
       - '@types/node'
     dev: true
 
-  /ts-node/10.9.1_typescript@4.7.4:
+  /ts-node/10.9.1_tyvfw3xlkeib37wbsln4bvkpbm:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -671,6 +672,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
+      '@types/node': 18.7.2
       acorn: 8.8.0
       acorn-walk: 8.2.0
       arg: 4.1.3
