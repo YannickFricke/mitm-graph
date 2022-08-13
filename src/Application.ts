@@ -1,5 +1,6 @@
 import { inject, injectable } from 'inversify';
 import { Logger } from 'tslog';
+import { Paginator } from './twitch/Paginator';
 import { TwitchToken } from './twitch/token';
 
 @injectable()
@@ -10,6 +11,9 @@ export class Application {
 
 		@inject(TwitchToken)
 		private readonly twitchToken: TwitchToken,
+
+		@inject(Paginator)
+		private readonly paginator: Paginator,
 	) {}
 
 	public async run() {
@@ -22,5 +26,7 @@ export class Application {
 		}
 
 		this.twitchToken.save_token();
+
+		this.paginator.load_from_file('paginator.json');
 	}
 }

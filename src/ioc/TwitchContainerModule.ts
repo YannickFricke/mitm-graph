@@ -1,4 +1,5 @@
 import { ContainerModule } from 'inversify';
+import { Paginator } from '../twitch/Paginator';
 import { TwitchToken } from '../twitch/token';
 import { Identifiers } from './Identifiers';
 
@@ -13,6 +14,7 @@ export class TwitchContainerModule extends ContainerModule {
 			);
 
 			bind(TwitchToken).toSelf().inSingletonScope();
+			bind(Paginator).toSelf().inSingletonScope();
 		});
 	}
 }
