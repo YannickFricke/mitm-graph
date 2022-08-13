@@ -1,4 +1,5 @@
 import { ContainerModule } from 'inversify';
+import { TwitchToken } from '../twitch/token';
 import { Identifiers } from './Identifiers';
 
 export class TwitchContainerModule extends ContainerModule {
@@ -10,6 +11,8 @@ export class TwitchContainerModule extends ContainerModule {
 			bind(Identifiers.TwitchClientSecret).toConstantValue(
 				process.env.TWITCH_CLIENT_SECRET,
 			);
+
+			bind(TwitchToken).toSelf().inSingletonScope();
 		});
 	}
 }
