@@ -3,10 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   got: ^12.3.1
   neo4j-driver: ^4.4.7
+  reflect-metadata: ^0.1.13
 
 dependencies:
   got: 12.3.1
   neo4j-driver: 4.4.7
+
+devDependencies:
+  reflect-metadata: 0.1.13
 
 packages:
 
@@ -254,6 +258,10 @@ packages:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
     dev: false
+
+  /reflect-metadata/0.1.13:
+    resolution: {integrity: sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==}
+    dev: true
 
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
