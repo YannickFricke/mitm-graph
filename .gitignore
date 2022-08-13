@@ -1,5 +1,7 @@
 node_modules/
+dist
 
 .env
 
 .twitch_token
+paginator.json
